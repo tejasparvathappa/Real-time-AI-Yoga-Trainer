@@ -263,8 +263,8 @@ def compare_pose(image, angle_point, angle_user, angle_target):
     angle_target = np.array(angle_target)
     angle_point = np.array(angle_point)
     stage = 0
-    cv2.rectangle(image, (0, 0), (300, 40), (255, 255, 255), -1)
-    cv2.rectangle(image, (0, 40), (300, 370), (255, 255, 255), -1)
+    # cv2.rectangle(image, (0, 0), (300, 40), (255, 255, 255), -1)
+    # cv2.rectangle(image, (0, 40), (300, 370), (255, 255, 255), -1)
     cv2.putText(image, str("Score:"), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, [0, 153, 0], 2, cv2.LINE_AA)
     height, width, _ = image.shape
 
@@ -598,34 +598,6 @@ def main():
                 #     break
 
         cap.release()
-    # duration = 0
-    # while True:
-    #     choice = int(input("1. T Pose   2.Arms Pose  3.Mountain Pose  4.Tree Pose  5.Warrior Pose  6. Kumara    7. Exit "))
-    #     if choice == 1:
-    #         duration += test1( "video/t.jpg")
-    #         print(duration)
-    #     elif choice == 2:
-    #         duration += test1("video/arms_pose.jpg")
-    #         print(duration)
-    #     elif choice == 3:
-    #         duration += test1("video/mountain.jpg")
-    #         print(duration)
-    #     elif choice == 4:
-    #         duration += test1("video/tree.png")
-    #         print(duration)
-    #     elif choice == 5:
-    #         duration += test1("video/warrior2.jpg")
-    #         print(duration)
-    #     elif choice == 6:
-    #         duration += test1("video/kumara_pose.jpeg")
-    #         print(duration)
-    #     elif choice == 7:
-    #         print("Total duration:", duration)
-    #         break
-    #     else:
-    #         print("Enter valid choice")
-    #
-
 
 if __name__ == "__main__":
     main()
